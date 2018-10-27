@@ -3,7 +3,7 @@ const express = require("express")
 const logger = require("morgan")
 const bodyParser = require("body-parser") // simplifies access to request body
 let fs=require('fs')
-let port=8080
+const port=process.env.PORT||8080
 const app = express()  // make express app
 const http = require('http').Server(app)  // inject app into the server
 
