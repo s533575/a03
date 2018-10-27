@@ -1,0 +1,36 @@
+<%include header%>
+<header>
+    <h1>Get Your Table Here</h1>
+  </header>
+  <main>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4" id="getNumber"> 
+   Enter the table you want to get:<input type="text" id="tableNumber">
+</div>
+<div class="col-md-4" id="getLastNumber">
+  Enter the number till where you want to get the table:<input type="text" id="endnumber">
+</div>
+<div class="col-md-4">
+        <button type="button" class="btn btn-success" onclick="Table.launch()">Submit</button>
+</div>
+</div>
+<div class="row" id="totalTable">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-teal text-center">
+                    <h3>Printing Table</h3>
+                </div>
+            <div id="PrintTable">
+            <table id="printtable">
+
+            </table>
+             
+            </div>
+            </div>
+</div>
+<div class="col-md-3"></div>
+</div>
+  </main>
+  <%include footer%>

@@ -1,0 +1,49 @@
+<%include header%>
+<header>
+    <h1>Online Grocery Booking</h1>
+  </header>
+  <main>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-3"> 
+</div>
+<div class="col-md-6" id="category">
+  Enter the Category of Grocery:<select name="Category" id="Category">
+      <option value=""></option>
+    <option value="Vegetables">Vegetables</option>
+    <option value="Fruits">Fruits</option>
+</select>
+</div>
+<div class="col-md-3">
+</div>
+</div>
+
+<div class="row" id="vegetables">
+        <div class="col-md-4" id="id1"><img src="images/tomato.jpg"><br><div><span>Price :1.1$</span>&nbsp;<span id="noOfItems1">No<input type="text" value="0"></span></div><input class="btn btn-success" type="button" value="ADD TO CART" id="tomato"></div>
+        <div class="col-md-4" id="id2"><img src="images/capsicum.jpg"><br><div><span value="2.5" id="capsicumPrice">Price : 2.5$</span>&nbsp;<span id="noOfItems2">No<input type="text"  value="0"></span></div><input class="btn btn-success" type="button" value="ADD TO CART" id="capsicum"></div>
+        <div class="col-md-4" id="id3"><img src="images/cucumber.jpg"><br><div><span value="1.25" id="cucumberPrice">Price : 1.25$</span>&nbsp;<span id="noOfItems3">No<input type="text" value="0"></span></div><input class="btn btn-success" type="button" value="ADD TO CART" id="cucumber"></div>
+</div>
+
+<div class="row" id="fruits">
+    <div class="col-md-4" id="id4"><img src="images/mango.jpg"><br><div><span value="5" id="mangoPrice">Price : 5$</span>&nbsp;<span id="noOfItems4">No<input type="text" value="0"></span></div><input class="btn btn-success" type="button" value="ADD TO CART" id="mango"></div>
+    <div class="col-md-4" id="id5"><img src="images/apple.jpg"><br><div><span value="3.78" id="applePrice">Price : 3.78$</span>&nbsp;<span id="noOfItems5">No<input type="text" value="0"></span></div><input class="btn btn-success" type="button" value="ADD TO CART" id="apple">
+        </div>
+<div class="col-md-4"></div>
+</div>
+
+
+<div class="row" id="CartDetails">
+<p>CART DETAILS:</p><br>
+<table id="cartTable">
+
+</table>   
+</div>
+<div id="total">
+
+</div>
+
+</div>
+
+  </main>
+
+  <%include footer%>

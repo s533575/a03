@@ -1,0 +1,22 @@
+body{
+    background-image: url("wallpaper.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    color: rgb(17, 17, 16);
+}
+
+.footer{
+    text-align:center;
+    margin-top:10px;
+
+}
+.section-header{
+    color: blue;
+}
+#past-section{
+    color: coral;
+
+}
+h4{
+    color: crimson;
+}
