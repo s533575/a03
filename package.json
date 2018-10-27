@@ -9,7 +9,7 @@
         "body-parser": "latest",
         "ejs": "latest"
     },
-    "author": "Denise Case",
+    "author": "Suresh",
     "homepage": "https://bitbucket.org/professorcase/a03",
     "repository": {
         "type": "git",
