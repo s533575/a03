@@ -3,7 +3,7 @@ const express = require("express")
 const logger = require("morgan")
 const bodyParser = require("body-parser") // simplifies access to request body
 let fs=require('fs')
-const port=process.env.PORT||8080
+//const port=process.env.PORT||8081
 const app = express()  // make express app
 const http = require('http').Server(app)  // inject app into the server
 
@@ -16,9 +16,9 @@ const http = require('http').Server(app)  // inject app into the server
 // 6 respond with 404 if a bad URI is requested
 
 // Listen for an application request on port 8081
-http.listen(8081, function () {
-  console.log('app listening on http://127.0.0.1:8081/')
-})
+// http.listen(8081, function () {
+//   console.log('app listening on http://127.0.0.1:8081/')
+// })
 
 app.set("views", path.resolve(__dirname, "views")) // path to views
 app.set("view engine", "ejs") // specify our view
@@ -57,23 +57,35 @@ app.get("/", function (req, res) {
    })
    
    app.post("/contact", function (req, res) {
-    const name = req.body.inputname;
-    const email = req.body.inputemail;
-    const company = req.body.inputcompany;
-    const comment = req.body.inputcomment;
+     var api_key='c4b180b5b509af6011b636c6409cfccd-4836d8f5-eba85ef4';
+     var domain='sandboxbfc5ba84680a45b58cf833b79421bb9a.mailgun.org';
+     var mailgun=require('mailgun-js')({apiKey:api_key,domain:domain});
+    const firstName = req.body.firstname;
+    const middleName = req.body.middlename;
+    const lastName = req.body.lastname;
+    const Email = req.body.email;
+    const mobile = req.body.mobileNumber;
     const isError = true;
    
     // setup e-mail data with unicode symbols
-    const mailOptions = {
-      from: '"Denise Case" <denisecase@gmail.com>', // sender address
-      to: 'dcase@nwmissouri.edu, denisecase@gmail.com', // list of receivers
-      subject: 'Message from Website Contact page', // Subject line
-      text: comment,
+    var data = {
+      from: 'Excited User <postmaster@sandboxbfc5ba84680a45b58cf833b79421bb9a.mailgun.org>', // sender address
+      to: 'peddinti1995suresh@gmail.com', // list of receivers
+      subject: 'questions', // Subject line
+      text: firstName,middleName,lastName,Email,mobile,
       err: isError
     }
+    mailgun.messages().send(data,function(error,body){
+      console.log(body);
+      if(!error)
+      res.send('your records has been stored')
+      else{
+        res.send('GoodBye')
+      }
+    });
    
     // logs to the terminal window (not the browser)
-    console.log('\nCONTACT FORM DATA: ' + name + ' ' + email + ' ' + comment + '\n');
+    //console.log('\nCONTACT FORM DATA: ' + name + ' ' + email + ' ' + comment + '\n');
     })
    
     app.get(function (req, res) {
@@ -81,8 +93,8 @@ app.get("/", function (req, res) {
        })
        
        // Listen for an application request on designated port
-       app.listen(port, function () {
-        console.log('Web app started and listening on http://localhost:' + port)
+       http.listen(process.env.PORT||8081, function () {
+        console.log('app listening on http://127.0.0.1:8081/')
        })
        
        

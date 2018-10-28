@@ -112,3 +112,8 @@
 ::ffff:127.0.0.1 - - [12/Oct/2018:00:24:32 +0000] "GET /website HTTP/1.1" 304 - "http://127.0.0.1:8081/table" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
 ::ffff:127.0.0.1 - - [12/Oct/2018:00:24:34 +0000] "GET / HTTP/1.1" 304 - "http://127.0.0.1:8081/website" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
 ::ffff:127.0.0.1 - - [12/Oct/2018:00:25:11 +0000] "GET /website HTTP/1.1" 304 - "http://127.0.0.1:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+::1 - - [28/Oct/2018:19:30:50 +0000] "GET / HTTP/1.1" 200 4468 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+::1 - - [28/Oct/2018:19:30:51 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+::1 - - [28/Oct/2018:19:30:53 +0000] "GET /contact HTTP/1.1" 200 5760 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+::1 - - [28/Oct/2018:19:33:56 +0000] "GET /contact HTTP/1.1" 200 6544 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+::1 - - [28/Oct/2018:19:35:58 +0000] "GET /contact HTTP/1.1" 200 6565 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
