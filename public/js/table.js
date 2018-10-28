@@ -17,9 +17,9 @@ function launch()
 function getTable(number1,tillValue)
 {
     var printTable = ""
-    if (typeof number1 !== 'number' || typeof tillValue !== 'number') {
-        throw Error('The given argument is not a number')
-    }
+    // if (typeof number1 !== 'number' || typeof tillValue !== 'number') {
+    //     throw Error('The given argument is not a number')
+    // }
     if(number1>0 && number1<=100)
     {
         if(tillValue>=0 && tillValue<=20)
