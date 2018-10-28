@@ -2,8 +2,8 @@
     "name": "a03",
     "version": "0.0.1",
     "description": "resume app",
-    "scripts":{
-      "start": "node app.js"  
+    "scripts": {
+        "start": "node app.js"
     },
     "main": "app.js",
     "dependencies": {
