@@ -28,17 +28,19 @@ function getTable(number1,tillValue)
          //$("#id3").html(number1*i)
         printTable+="<tr><td>"+number1+"</td><td>*</td><td>"+i+"</td><td>=</td><td>"+number1*i+"</td></tr>"
         console.log(printTable)
-
+        return 1
         }
         }
         else
         {
          alert("You need to enter the table value from 0 to 20 only")
+         return 0
         }
     }
     else
     {
         alert("The numbers should be between 0 to 101")
+        return 0
     }
 
     $("#printtable").append(printTable)
